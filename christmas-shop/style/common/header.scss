@@ -1,7 +1,7 @@
 .header {
   height: 64px;
   padding: 12px 82px;
-  background: #ffffff;
+  background: var(--color-white);;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,7 +24,7 @@
     line-height: 130%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #181C29;
+    color: var(--color-black);;
   }
 }
 
@@ -36,10 +36,6 @@
   gap: 8px;
   list-style: none;
 
-  &__item {
-    padding: 12px 20px;
-  }
-
   &__link {
     &,
     &:link,
@@ -47,6 +43,8 @@
     &:hover,
     &:active,
     &:focus {
+      border-radius: 12px;
+      padding: 12px 20px;
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 600;
@@ -55,7 +53,19 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       text-decoration: none;
-      color: #181C29;
+      color: var(--color-black);
+    }
+
+    &--active {
+      &,
+      &:link,
+      &:visited,
+      &:hover,
+      &:active,
+      &:focus {
+        background: var(--color-pink);
+        color: var(--color-red);
+      }
     }
   }
 }

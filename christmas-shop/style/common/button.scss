@@ -7,7 +7,7 @@
   &:focus {
     display: inline-block;
     padding: 20px 32px;
-    background: #181C29;
+    background: var(--color-black);
     border-radius: 20px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -18,6 +18,6 @@
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color-white);
   }
 }

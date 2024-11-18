@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   height: 524px;
-  background: url(assets/home/hero/bg-ball.png) center / cover no-repeat, url(assets/home/common/bg-snow.png) center / cover repeat-x, #FF4646;
+  background: url(assets/home/hero/bg-ball.png) center / cover no-repeat, url(assets/home/common/bg-snow.png) center / cover repeat-x, var(--color-red);
   border-radius: 20px 20px 0 0;
 
   &__button {
@@ -22,6 +22,6 @@
     text-align: center;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color-white);
   }
 }
