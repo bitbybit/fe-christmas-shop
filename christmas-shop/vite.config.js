@@ -16,7 +16,7 @@ export default {
 
     rollupOptions: {
       input: {
-        home: 'home.html',
+        index: 'index.html',
         gifts: 'gifts.html',
       },
     },
