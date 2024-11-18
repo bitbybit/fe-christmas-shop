@@ -1,4 +1,13 @@
+import { resolve } from 'node:path'
+
 export default {
+  resolve: {
+    alias: {
+      assets: resolve(import.meta.dirname, './assets'),
+      style: resolve(import.meta.dirname, './style'),
+    }
+  },
+
   build: {
     sourcemap: true,
 
