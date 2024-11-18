@@ -1,0 +1,19 @@
+{
+  "name": "christmas-shop",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "prod": "vue-tsc --build && vite build",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "modern-normalize": "^3.0.1",
+    "sass": "^1.80.6",
+    "vite": "^5.4.11"
+  }
+}
