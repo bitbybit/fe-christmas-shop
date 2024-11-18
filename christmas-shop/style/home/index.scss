@@ -1,5 +1,2 @@
-@import 'modern-normalize/modern-normalize.css';
-
-html {
-  background: #f00;
-}
+@use "style/common/index.scss";
+@use "style/home/hero.scss";
