@@ -9,6 +9,9 @@ export default {
   },
 
   build: {
+    assetsInlineLimit: 0,
+    cssCodeSplit: false,
+    cssMinify: false,
     sourcemap: true,
 
     rollupOptions: {
