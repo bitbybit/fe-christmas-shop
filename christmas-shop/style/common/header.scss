@@ -37,35 +37,30 @@
   list-style: none;
 
   &__link {
-    &,
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+
     &:link,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus {
-      border-radius: 12px;
-      padding: 12px 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 130%;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      text-decoration: none;
+    &:visited {
       color: var(--color-black);
     }
 
-    &--active {
-      &,
-      &:link,
-      &:visited,
-      &:hover,
-      &:active,
-      &:focus {
-        background: var(--color-pink);
-        color: var(--color-red);
-      }
+    &:hover,
+    &:active,
+    &:focus,
+    &--active,
+    &--active:link {
+      background: var(--color-pink);
+      color: var(--color-red);
     }
   }
 }
