@@ -1,0 +1,27 @@
+.about {
+  padding: 60px 82px;
+  background: url(assets/home/common/bg-snow.png) center / cover repeat-x, var(--color-red);
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--color-white);
+    color: var(--color-black);
+  }
+
+  &__text {
+    padding: 15px 60px 0;
+    width: 546px;
+  }
+
+  &__caption {
+    color: var(--color-red);
+  }
+
+  &__picture {
+    border-radius: 20px;
+  }
+}
