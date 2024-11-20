@@ -1,0 +1,17 @@
+.all-gifts {
+  padding: 60px 82px;
+  background: var(--color-red) url(assets/gifts/all-gifts/bg-garland.png) top center / contain no-repeat;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--color-white);
+
+  &__header.h1 {
+    width: 430px;
+    margin: 0 auto;
+  }
+
+  &__menu.menu {
+    margin: 20px 0;
+    justify-content: center;
+  }
+}

@@ -2,6 +2,7 @@
   height: 64px;
   padding: 12px 82px;
   background: var(--color-white);
+  color: var(--color-black);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,45 +27,5 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--color-black);
-  }
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0;
-  gap: 8px;
-  list-style: none;
-
-  &__link {
-    border-radius: 12px;
-    padding: 12px 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 130%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.3s;
-
-    &:link,
-    &:visited {
-      color: var(--color-black);
-    }
-
-    &:hover,
-    &:active,
-    &:focus,
-    &--active {
-      background: var(--color-red-light);
-      color: var(--color-red);
-    }
-
-    &--active {
-      pointer-events: none;
-    }
   }
 }
