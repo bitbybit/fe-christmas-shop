@@ -1,0 +1,58 @@
+.cards {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 310px 310px 310px 310px;
+}
+
+.card {
+  width: 310px;
+  height: 342px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-gray);
+  border-radius: 20px;
+
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &__text {
+    width: 100%;
+    padding: 20px;
+    height: 112px;
+    background: var(--color-white);
+    color: var(--color-black);
+    border-radius: 20px;
+    text-align: left;
+    transition: all 0.3s;
+  }
+
+  &:hover &__text,
+  &:active &__text,
+  &:focus &__text {
+    color: var(--color-red);
+  }
+
+  &__header {
+    padding-bottom: 8px;
+
+    &--work {
+      color: var(--color-purple);
+    }
+
+    &--health {
+      color: var(--color-green);
+    }
+
+    &--harmony{
+      color: var(--color-pink);
+    }
+  }
+}

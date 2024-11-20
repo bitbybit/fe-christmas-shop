@@ -40,6 +40,7 @@
     &:hover,
     &:active,
     &:focus {
+      pointer-events: none;
       opacity: 0.4;
     }
   }

@@ -58,10 +58,13 @@
     &:hover,
     &:active,
     &:focus,
-    &--active,
-    &--active:link {
-      background: var(--color-pink);
+    &--active {
+      background: var(--color-red-light);
       color: var(--color-red);
+    }
+
+    &--active {
+      pointer-events: none;
     }
   }
 }

@@ -1,0 +1,11 @@
+.best-gifts {
+  padding: 60px 82px;
+  background: url(assets/home/common/bg-snow.png) center / cover repeat-y, var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+
+  &__header.h2 {
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+}

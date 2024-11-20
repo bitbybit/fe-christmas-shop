@@ -1,7 +1,7 @@
 .hero {
   padding: 120px 0 0;
   height: 524px;
-  background: url(assets/home/hero/bg-ball.png) center / cover no-repeat, url(assets/home/common/bg-snow.png) center / cover repeat-x, var(--color-red);
+  background: url(assets/home/hero/bg-ball.png) center / cover no-repeat, url(assets/home/common/bg-snow.png) center / cover repeat-y, var(--color-red);
   border-radius: 20px 20px 0 0;
   text-align: center;
   color: var(--color-white);
@@ -10,7 +10,7 @@
     margin: 15px 0 12px;
   }
 
-  &__header {
+  &__header.h1 {
     width: 430px;
     margin: 10px auto 0;
   }
