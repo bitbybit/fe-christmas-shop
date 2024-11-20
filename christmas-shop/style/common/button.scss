@@ -51,6 +51,7 @@
       color: var(--color-red);
 
       path {
+        transition: all 0.3s;
         stroke: var(--color-red);
       }
     }

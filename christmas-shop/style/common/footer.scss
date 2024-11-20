@@ -60,6 +60,8 @@
   }
 
   &__social {
+    transition: all 0.3s;
+
     &,
     &:link,
     &:visited,
@@ -71,6 +73,29 @@
       img {
         border: 0;
       }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      path {
+        stroke: var(--color-red);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--color-red);
     }
   }
 }
