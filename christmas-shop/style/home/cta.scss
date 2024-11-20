@@ -1,0 +1,53 @@
+.cta {
+  padding: 60px 82px;
+  background: url(assets/home/common/bg-snow.png) center / cover repeat-y, url(assets/home/cta/bg-forest.png) bottom center / cover no-repeat, var(--color-red);
+  border-radius: 0 0 20px 20px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 118px 0;
+    color: var(--color-white);
+  }
+
+  &__header.h2 {
+    text-align: center;
+    width: 430px;
+  }
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 344px;
+    height: 72px;
+    padding: 8px 12px 12px;
+    background: var(--color-white-lighter);
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:first-child):before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      bottom: 16px;
+      left: 0;
+      width: 1px;
+      background-color: var(--color-white-light)
+    }
+  }
+}

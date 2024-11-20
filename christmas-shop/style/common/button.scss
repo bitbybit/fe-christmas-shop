@@ -7,7 +7,6 @@
   &:focus {
     display: inline-block;
     padding: 20px 32px;
-    background: var(--color-black);
     border-radius: 20px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -18,18 +17,42 @@
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  &,
+  &:link,
+  &:visited {
+    background: var(--color-black);
     color: var(--color-white);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: var(--color-white);
+    color: var(--color-black);
   }
 
   &--outline {
     &,
     &:link,
-    &:visited,
+    &:visited {
+      background: transparent;
+      border: 1px solid var(--color-white);
+      color: inherit;
+    }
+
     &:hover,
     &:active,
     &:focus {
-      border: 1px solid var(--color-black);
-      background: transparent;
+      border-color: transparent;
+      background: var(--color-white);
+      color: var(--color-red);
+
+      path {
+        stroke: var(--color-red);
+      }
     }
   }
 
