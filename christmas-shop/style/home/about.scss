@@ -21,6 +21,11 @@
     color: var(--color-red);
   }
 
+  &__header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   &__picture {
     border-radius: 20px;
   }

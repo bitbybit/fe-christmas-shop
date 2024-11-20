@@ -20,4 +20,27 @@
     text-transform: uppercase;
     color: var(--color-white);
   }
+
+  &--outline {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid var(--color-black);
+      background: transparent;
+    }
+  }
+
+  &--disabled {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.4;
+    }
+  }
 }

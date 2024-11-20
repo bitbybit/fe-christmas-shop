@@ -5,3 +5,7 @@
 @use 'style/common/caption.scss';
 @use 'style/common/button.scss';
 @use 'style/common/typography.scss';
+
+html {
+  scroll-behavior: smooth;
+}
