@@ -1,11 +1,20 @@
+@use '../common/screens.scss' as screen;
+
+$width: 310px;
+
 .cards {
   display: grid;
   gap: 12px;
-  grid-template-columns: 310px 310px 310px 310px;
+  grid-template-columns: $width $width $width $width;
+  place-self: center;
+
+  @media (max-width: screen.$md) {
+    grid-template-columns: $width $width;
+  }
 }
 
 .card {
-  width: 310px;
+  width: $width;
   height: 342px;
   display: flex;
   flex-direction: column;

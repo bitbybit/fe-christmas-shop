@@ -1,11 +1,22 @@
+@use '../common/screens.scss' as screen;
+
 .footer {
   padding: 60px 82px;
   background: var(--color-white);
+
+  @media (max-width: screen.$md) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 
   &__cards {
     display: grid;
     gap: 12px;
     grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: screen.$md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -46,9 +57,11 @@
   &__copyrights {
     padding-top: 60px;
     display: flex;
+    gap: 10px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
   }
 
   &__socials {

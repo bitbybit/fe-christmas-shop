@@ -1,4 +1,10 @@
+@use './screens.scss' as screen;
+
 .container {
-  width: 1440px;
+  width: screen.$lg;
   margin: 0 auto;
+
+  @media (max-width: screen.$md) {
+    width: 100%;
+  }
 }

@@ -1,6 +1,13 @@
+@use '../common/screens.scss' as screen;
+
 .about {
   padding: 60px 82px;
   background: url(assets/home/common/bg-snow.png) center / cover repeat-y, var(--color-red);
+
+  @media (max-width: screen.$md) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 
   &__content {
     display: flex;
@@ -13,8 +20,12 @@
   }
 
   &__text {
-    padding: 15px 60px 0;
+    padding: 0 60px;
     width: 546px;
+
+    @media (max-width: screen.$md) {
+      width: 50%;
+    }
   }
 
   &__caption {
@@ -27,6 +38,13 @@
   }
 
   &__picture {
+    width: 638px;
+    height: 528px;
     border-radius: 20px;
+
+    @media (max-width: screen.$md) {
+      width: 50%;
+      object-fit: cover;
+    }
   }
 }
