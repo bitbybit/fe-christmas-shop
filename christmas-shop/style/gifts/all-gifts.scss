@@ -17,6 +17,10 @@
   &__header.h1 {
     width: 430px;
     margin: 0 auto;
+
+    @media (max-width: screen.$sm) {
+      width: 100%;
+    }
   }
 
   &__menu.menu {
