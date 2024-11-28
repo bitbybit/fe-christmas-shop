@@ -4,7 +4,7 @@
   padding: 60px 82px;
   background: var(--color-white);
 
-  @media (max-width: screen.$md) {
+  @media (max-width: screen.$lg - 1px) {
     padding-left: 8px;
     padding-right: 8px;
   }
@@ -14,7 +14,7 @@
     gap: 12px;
     grid-template-columns: repeat(3, 1fr);
 
-    @media (max-width: screen.$md) {
+    @media (max-width: screen.$lg - 1px) {
       grid-template-columns: 1fr;
     }
   }

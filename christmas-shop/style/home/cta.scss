@@ -5,7 +5,7 @@
   background: url(assets/home/common/bg-snow.png) center / cover repeat-y, url(assets/home/cta/bg-forest.png) bottom center / cover no-repeat, var(--color-red);
   border-radius: 0 0 20px 20px;
 
-  @media (max-width: screen.$md) {
+  @media (max-width: screen.$lg - 1px) {
     padding-left: 8px;
     padding-right: 8px;
   }
@@ -24,7 +24,7 @@
     text-align: center;
     width: 430px;
 
-    @media (max-width: screen.$sm) {
+    @media (max-width: screen.$md - 1px) {
       width: 100%;
     }
   }

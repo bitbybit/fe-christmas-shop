@@ -4,12 +4,12 @@
   padding: 60px 82px;
   background: url(assets/home/common/bg-snow.png) center / cover repeat-y, var(--color-red);
 
-  @media (max-width: screen.$md) {
+  @media (max-width: screen.$lg - 1px) {
     padding-left: 8px;
     padding-right: 8px;
   }
 
-  @media (max-width: screen.$sm) {
+  @media (max-width: screen.$md - 1px) {
     padding-top: 108px;
   }
 
@@ -22,7 +22,7 @@
     background: var(--color-white);
     color: var(--color-black);
 
-    @media (max-width: screen.$sm) {
+    @media (max-width: screen.$md - 1px) {
       flex-direction: column;
     }
   }
@@ -31,11 +31,11 @@
     padding: 0 60px;
     width: 546px;
 
-    @media (max-width: screen.$md) {
+    @media (max-width: screen.$lg - 1px) {
       width: 50%;
     }
 
-    @media (max-width: screen.$sm) {
+    @media (max-width: screen.$md - 1px) {
       padding: 60px 20px;
       width: 100%;
     }
@@ -51,16 +51,12 @@
   }
 
   &__picture {
-    width: 638px;
+    width: 50%;
     height: 528px;
+    object-fit: cover;
     border-radius: 20px;
 
-    @media (max-width: screen.$md) {
-      width: 50%;
-      object-fit: cover;
-    }
-
-    @media (max-width: screen.$sm) {
+    @media (max-width: screen.$md - 1px) {
       width: 100%;
     }
   }

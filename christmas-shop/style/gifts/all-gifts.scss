@@ -9,7 +9,7 @@
   text-align: center;
   color: var(--color-white);
 
-  @media (max-width: screen.$md) {
+  @media (max-width: screen.$lg - 1px) {
     padding-left: 8px;
     padding-right: 8px;
   }
@@ -18,7 +18,7 @@
     width: 430px;
     margin: 0 auto;
 
-    @media (max-width: screen.$sm) {
+    @media (max-width: screen.$md - 1px) {
       width: 100%;
     }
   }

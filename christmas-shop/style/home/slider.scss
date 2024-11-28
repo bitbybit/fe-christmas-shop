@@ -7,7 +7,7 @@
   text-align: center;
   overflow: hidden;
 
-  @media (max-width: screen.$md) {
+  @media (max-width: screen.$lg - 1px) {
     padding-left: 8px;
     padding-right: 8px;
   }
