@@ -9,10 +9,6 @@
     padding-right: 8px;
   }
 
-  @media (max-width: screen.$md - 1px) {
-    padding-top: 108px;
-  }
-
   &__content {
     display: flex;
     flex-direction: row;

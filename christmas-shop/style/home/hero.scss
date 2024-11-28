@@ -13,6 +13,10 @@
     padding-right: 8px;
   }
 
+  @media (max-width: screen.$md - 1px) {
+    height: 570px;
+  }
+
   &__button {
     margin: 15px 0 12px;
   }
