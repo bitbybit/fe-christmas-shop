@@ -1,11 +1,17 @@
+@use '../common/screens.scss' as screen;
+
+$width: 310px;
+
 .cards {
   display: grid;
+  width: 100%;
   gap: 12px;
-  grid-template-columns: 310px 310px 310px 310px;
+  grid-template-columns: repeat(auto-fit, minmax($width, max-content));
+  justify-content: center;
 }
 
 .card {
-  width: 310px;
+  width: $width;
   height: 342px;
   display: flex;
   flex-direction: column;

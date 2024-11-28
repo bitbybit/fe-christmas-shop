@@ -1,3 +1,5 @@
+@use '../common/screens.scss' as screen;
+
 .all-gifts {
   padding: 60px 82px;
   background: var(--color-red) url(assets/gifts/all-gifts/bg-garland.png) top center / contain no-repeat;
@@ -5,9 +7,18 @@
   text-align: center;
   color: var(--color-white);
 
+  @media (max-width: screen.$lg - 1px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
   &__header.h1 {
     width: 430px;
     margin: 0 auto;
+
+    @media (max-width: screen.$md - 1px) {
+      width: 100%;
+    }
   }
 
   &__menu.menu {

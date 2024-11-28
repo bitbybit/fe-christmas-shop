@@ -1,8 +1,15 @@
+@use '../common/screens.scss' as screen;
+
 .best-gifts {
   padding: 60px 82px;
   background: url(assets/home/common/bg-snow.png) center / cover repeat-y, var(--color-red);
   color: var(--color-white);
   text-align: center;
+
+  @media (max-width: screen.$lg - 1px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 
   &__header.h2 {
     margin-top: 13px;
