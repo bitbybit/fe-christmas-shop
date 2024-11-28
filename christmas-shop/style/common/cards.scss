@@ -3,21 +3,11 @@
 $width: 310px;
 
 .cards {
-  $gap: 12px;
-
   display: grid;
   width: 100%;
-  gap: $gap;
-  grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
-  place-self: center;
-
-  @media (max-width: screen.$lg - 1px) {
-    width: $width * 2 + $gap;
-  }
-
-  @media (max-width: screen.$md - 1px) {
-    width: $width;
-  }
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax($width, max-content));
+  justify-content: center;
 }
 
 .card {

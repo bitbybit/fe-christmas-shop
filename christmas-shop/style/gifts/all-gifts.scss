@@ -1,8 +1,6 @@
 @use '../common/screens.scss' as screen;
 
 .all-gifts {
-  display: flex;
-  flex-direction: column;
   padding: 60px 82px;
   background: var(--color-red) url(assets/gifts/all-gifts/bg-garland.png) top center / contain no-repeat;
   border-radius: 20px;
