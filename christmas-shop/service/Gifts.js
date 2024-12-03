@@ -93,7 +93,7 @@ export class Gifts {
   }
 
   async load() {
-    const response = await fetch(`assets/gifts.json`)
+    const response = await fetch(`gifts.json`)
     this.all = await response.json()
 
     this.insertBest()

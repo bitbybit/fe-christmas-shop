@@ -1,5 +1,6 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
   base: 'https://rolling-scopes-school.github.io/bitbybit-JSFE2024Q4/christmas-shop/',
@@ -33,5 +34,16 @@ export default defineConfig({
         api: 'modern'
       }
     }
-  }
+  },
+
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'gifts.json',
+          dest: './'
+        }
+      ]
+    })
+  ]
 })
