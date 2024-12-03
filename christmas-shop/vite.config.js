@@ -8,6 +8,7 @@ export default defineConfig({
     alias: {
       assets: resolve(import.meta.dirname, './assets'),
       style: resolve(import.meta.dirname, './style'),
+      service: resolve(import.meta.dirname, './service'),
     }
   },
 
