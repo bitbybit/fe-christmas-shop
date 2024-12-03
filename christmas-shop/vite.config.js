@@ -42,6 +42,10 @@ export default defineConfig({
         {
           src: 'gifts.json',
           dest: './'
+        },
+        {
+          src: './assets/common/gifts',
+          dest: './assets/common/'
         }
       ]
     })
