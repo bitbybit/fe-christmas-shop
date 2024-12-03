@@ -43,14 +43,17 @@ export class Gifts {
     this.insertAll()
   }
 
-  insertBest () {
+  insertBest (isRandom = true) {
     const element = document.querySelector(this.#selectorBestGifts)
 
     if (element === null) {
       return
     }
 
-    element.innerHTML = this.#giftsToTemplate(this.best)
+    const gifts = (isRandom ? this.random : this.best)
+      .slice(0, this.#bestAmount)
+
+    element.innerHTML = this.#giftsToTemplate(gifts)
   }
 
   /**
@@ -171,7 +174,16 @@ export class Gifts {
   get best () {
     return this.all.toSorted((a, b) =>
       this.#getTotalSuperpowers(b) - this.#getTotalSuperpowers(a)
-    ).slice(0, this.#bestAmount)
+    )
+  }
+
+  /**
+   * @returns {Gift[]}
+   */
+  get random () {
+    return this.all.toSorted(() =>
+      Math.random() - 0.5
+    )
   }
 
   /**
