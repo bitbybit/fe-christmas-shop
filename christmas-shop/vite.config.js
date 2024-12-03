@@ -17,6 +17,7 @@ export default defineConfig({
     cssCodeSplit: false,
     cssMinify: false,
     sourcemap: true,
+    minify: false,
 
     rollupOptions: {
       input: {
