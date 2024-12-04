@@ -2,7 +2,7 @@
  * @typedef {{
  *   cssClassNames: {
  *     close: string
- *   },
+ *   }
  *   cssSelectors: {
  *     modal: string
  *     picture: string

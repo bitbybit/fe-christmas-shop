@@ -3,10 +3,10 @@
  *   cssClassNames: {
  *     item: string
  *     active: string
- *   },
+ *   }
  *   cssSelectors: {
  *     menu: string
- *   },
+ *   }
  *   onSwitchTab: (tab: string) => {}
  * }} TabConfig
  */
