@@ -4,6 +4,7 @@ import { Tabs } from 'service/Tabs.js'
 const init = async function () {
   const gifts = new Gifts({
     bestAmount: 4,
+
     categories: {
       all: {
         name: 'All',
@@ -26,10 +27,13 @@ const init = async function () {
         picture: 'assets/common/gifts/gift-for-harmony.png'
       }
     },
+
     cssSelectors: {
       all: '.all-gifts .cards',
       best: '#best-gifts .cards'
-    }
+    },
+
+    onClickGift(gift) {}
   })
 
   await gifts.load()
@@ -39,9 +43,11 @@ const init = async function () {
       item: 'menu__link',
       active: 'menu__link--active'
     },
+
     cssSelectors: {
       menu: '.all-gifts__menu'
     },
+
     onSwitchTab(tab) {
       gifts.insertAll(tab)
     }

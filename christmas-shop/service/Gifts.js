@@ -36,7 +36,8 @@
  *   cssSelectors: {
  *     all: string
  *     best: string
- *   }
+ *   },
+ *   onClickGift: (gift: Gift) => {}
  * }} GiftConfig
  */
 
@@ -64,17 +65,24 @@ export class Gifts {
   #elements
 
   /**
+   * @type {string}
+   */
+  #giftCssClassName = 'card'
+
+  /**
    * @param {GiftConfig} config
    */
   constructor ({
     bestAmount,
     categories,
     cssSelectors,
+    onClickGift
   }) {
     this.#config = {
       bestAmount,
       categories,
-      cssSelectors
+      cssSelectors,
+      onClickGift
     }
 
     this.#elements = {
@@ -89,6 +97,8 @@ export class Gifts {
 
     this.insertBest()
     this.insertAll()
+
+    this.#addClickHandlers()
   }
 
   insertBest (isRandom = true) {
@@ -136,13 +146,14 @@ export class Gifts {
   #giftToTemplate(gift) {
     const picture = this.#getPicture(gift)
     const styleModifier = this.#getStyleModifier(gift)
+    const meta = encodeURI(JSON.stringify(gift))
 
     return `
-      <a class="card" data-category="${gift.category}" href="#">
-        <img class="card__picture" src="${picture}" alt="${gift.category}">
+      <a class="${this.#giftCssClassName}" data-category="${gift.category}" data-meta="${meta}" href="#">
+        <img class="${this.#giftCssClassName}__picture" src="${picture}" alt="${gift.category}">
 
-        <div class="card__text">
-          <h4 class="h4 card__header card__header--${styleModifier}">
+        <div class="${this.#giftCssClassName}__text">
+          <h4 class="h4 ${this.#giftCssClassName}__header ${this.#giftCssClassName}__header--${styleModifier}">
             ${gift.category}
           </h4>
 
@@ -210,6 +221,32 @@ export class Gifts {
     const values = Object.values(gift.superpowers)
 
     return values.reduce((total, value) => total + Number(value), 0)
+  }
+
+  #addClickHandlers() {
+    const containers = Object.values(this.#elements)
+
+    containers.forEach((container) => {
+      if (container !== null) {
+        container.addEventListener('click', this.#clickHandler.bind(this))
+      }
+    })
+  }
+
+  /**
+   * @param {Event} e
+   */
+  #clickHandler(e) {
+    const item = e.target.closest(`.${this.#giftCssClassName}`)
+    const meta = item.getAttribute('data-meta')
+
+    if (meta !== null) {
+      e.preventDefault()
+
+      const gift = JSON.parse(decodeURI(meta))
+
+      this.#config.onClickGift(gift)
+    }
   }
 
   /**
