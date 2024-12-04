@@ -46,6 +46,10 @@ export default defineConfig({
         {
           src: './assets/common/gifts',
           dest: './assets/common/'
+        },
+        {
+          src: './assets/common/modal/snowflake.svg',
+          dest: './assets/common/modal/'
         }
       ]
     })

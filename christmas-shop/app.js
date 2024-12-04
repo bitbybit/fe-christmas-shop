@@ -1,7 +1,20 @@
 import { Gifts } from 'service/Gifts.js'
 import { Tabs } from 'service/Tabs.js'
+import { Modal } from 'service/Modal.js'
 
 const init = async function () {
+  const modal = new Modal({
+    cssClassNames: {
+      close: 'modal__close'
+    },
+
+    cssSelectors: {
+      modal: '.modal',
+      picture: '.modal .card__picture',
+      text: '.modal .card__text'
+    },
+  })
+
   const gifts = new Gifts({
     bestAmount: 4,
 
@@ -33,7 +46,9 @@ const init = async function () {
       best: '#best-gifts .cards'
     },
 
-    onClickGift(gift) {}
+    onClickGift(meta) {
+      modal.show(meta)
+    }
   })
 
   await gifts.load()

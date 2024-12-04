@@ -12,162 +12,174 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/common/favicons/apple-touch-icon.png">
   </head>
   <body>
-  <div class="container">
-    <header class="header">
-      <a href="index.html" class="logo">
-        <img src="assets/common/header/snowflake.svg" width="22" height="24" alt="Logo">
+    <div class="container">
+      <header class="header">
+        <a href="index.html" class="logo">
+          <img src="assets/common/header/snowflake.svg" width="22" height="24" alt="Logo">
 
-        <span class="logo__text">
-          THE GIFTS
-        </span>
-      </a>
-
-      <ul class="menu header__menu">
-        <li class="menu__item">
-          <span class="menu__link menu__link--active">
-            GIFTS
+          <span class="logo__text">
+            THE GIFTS
           </span>
-        </li>
+        </a>
 
-        <li class="menu__item">
-          <a class="menu__link" href="index.html#about">
-            ABOUT
+        <ul class="menu header__menu">
+          <li class="menu__item">
+            <span class="menu__link menu__link--active">
+              GIFTS
+            </span>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="index.html#about">
+              ABOUT
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="index.html#best-gifts">
+              BEST
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="#contacts">
+              CONTACTS
+            </a>
+          </li>
+        </ul>
+
+        <img class="header__menu-burger" src="assets/common/header/burger.svg" width="40" height="40" alt="Burger">
+      </header>
+
+      <div class="all-gifts">
+        <h1 class="h1 all-gifts__header">
+          Achieve health, harmony, and inner strength
+        </h1>
+
+        <ul class="menu menu--dark all-gifts__menu">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" data-tab="all" href="#">
+              All
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" data-tab="work" href="#">
+              for work
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" data-tab="health" href="#">
+              for health
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" data-tab="harmony" href="#">
+              for harmony
+            </a>
+          </li>
+        </ul>
+
+        <div class="cards"></div>
+      </div>
+
+      <footer class="footer" id="contacts">
+        <div class="footer__cards">
+          <a class="footer__card" href="tel:+375291112233">
+            <img class="footer__picture" src="assets/common/footer/santa-claus.svg" width="81" height="80" alt="Santa Claus">
+
+            <div class="footer__text">
+              +375 (29) 111-22-33
+            </div>
+
+            <h3 class="h3">
+              Call Us
+            </h3>
           </a>
-        </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="index.html#best-gifts">
-            BEST
+          <a class="footer__card" href="https://maps.app.goo.gl/ZKt3yd1e6CduYzpW8" target="_blank">
+            <img class="footer__picture" src="assets/common/footer/christmas-tree.svg" width="80" height="80" alt="Christmas Tree">
+
+            <div class="footer__text">
+              Magic forest
+            </div>
+
+            <h3 class="h3">
+              meet us
+            </h3>
           </a>
-        </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#contacts">
-            CONTACTS
+          <a class="footer__card" href="mailto:gifts@magic.com">
+            <img class="footer__picture" src="assets/common/footer/snake.svg" width="81" height="80" alt="Snake">
+
+            <div class="footer__text">
+              gifts@magic.com
+            </div>
+
+            <h3 class="h3">
+              write us
+            </h3>
           </a>
-        </li>
-      </ul>
+        </div>
 
-      <img class="header__menu-burger" src="assets/common/header/burger.svg" width="40" height="40" alt="Burger">
-    </header>
+        <div class="footer__copyrights">
+          <div class="footer__socials">
+            <a class="footer__social" href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29 13L10 20.5L17 21.5M29 13L26.5 28L17 21.5M29 13L17 21.5M17 21.5V27L20.2488 23.7229" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
 
-    <div class="all-gifts">
-      <h1 class="h1 all-gifts__header">
-        Achieve health, harmony, and inner strength
-      </h1>
+            <a class="footer__social" href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 10H22C20.6739 10 19.4021 10.5268 18.4645 11.4645C17.5268 12.4021 17 13.6739 17 15V18H14V22H17V30H21V22H24L25 18H21V15C21 14.7348 21.1054 14.4804 21.2929 14.2929C21.4804 14.1054 21.7348 14 22 14H25V10Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
 
-      <ul class="menu menu--dark all-gifts__menu">
-        <li class="menu__item">
-          <a class="menu__link menu__link--active" data-tab="all" href="#">
-            All
-          </a>
-        </li>
+            </a>
 
-        <li class="menu__item">
-          <a class="menu__link" data-tab="work" href="#">
-            for work
-          </a>
-        </li>
+            <a class="footer__social" href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 24C22.2091 24 24 22.2091 24 20C24 17.7909 22.2091 16 20 16C17.7909 16 16 17.7909 16 20C16 22.2091 17.7909 24 20 24Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 24V16C11 13.2386 13.2386 11 16 11H24C26.7614 11 29 13.2386 29 16V24C29 26.7614 26.7614 29 24 29H16C13.2386 29 11 26.7614 11 24Z" stroke="#181C29" stroke-width="1.5"/>
+                <path d="M25.5 14.51L25.51 14.4989" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
 
-        <li class="menu__item">
-          <a class="menu__link" data-tab="health" href="#">
-            for health
-          </a>
-        </li>
+            </a>
 
-        <li class="menu__item">
-          <a class="menu__link" data-tab="harmony" href="#">
-            for harmony
-          </a>
-        </li>
-      </ul>
+            <a class="footer__social" href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.8198 28.7684L11.7532 11.9684C11.4466 11.5742 11.7275 11 12.2268 11H14.7065C14.8917 11 15.0665 11.0855 15.1802 11.2316L28.2468 28.0316C28.5534 28.4258 28.2725 29 27.7732 29H25.2935C25.1083 29 24.9335 28.9145 24.8198 28.7684Z" stroke="#181C29" stroke-width="1.5"/>
+                <path d="M28 11L12 29" stroke="#181C29" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
 
-      <div class="cards"></div>
+            </a>
+          </div>
+
+          <p>
+            © Copyright 2025, All Rights Reserved
+          </p>
+
+          <div class="caption">
+            <a href="https://rs.school" class="footer__link" target="_blank">Made in Rolling Scopes School</a>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <footer class="footer" id="contacts">
-      <div class="footer__cards">
-        <a class="footer__card" href="tel:+375291112233">
-          <img class="footer__picture" src="assets/common/footer/santa-claus.svg" width="81" height="80" alt="Santa Claus">
-
-          <div class="footer__text">
-            +375 (29) 111-22-33
-          </div>
-
-          <h3 class="h3">
-            Call Us
-          </h3>
+    <div class="modal">
+      <div class="card modal__card">
+        <a class="modal__close" href="#">
+          <img src="assets/common/modal/close.svg" alt="Close">
         </a>
 
-        <a class="footer__card" href="https://maps.app.goo.gl/ZKt3yd1e6CduYzpW8" target="_blank">
-          <img class="footer__picture" src="assets/common/footer/christmas-tree.svg" width="80" height="80" alt="Christmas Tree">
+        <img class="card__picture" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
 
-          <div class="footer__text">
-            Magic forest
-          </div>
-
-          <h3 class="h3">
-            meet us
-          </h3>
-        </a>
-
-        <a class="footer__card" href="mailto:gifts@magic.com">
-          <img class="footer__picture" src="assets/common/footer/snake.svg" width="81" height="80" alt="Snake">
-
-          <div class="footer__text">
-            gifts@magic.com
-          </div>
-
-          <h3 class="h3">
-            write us
-          </h3>
-        </a>
+        <div class="card__text"></div>
       </div>
+    </div>
 
-      <div class="footer__copyrights">
-        <div class="footer__socials">
-          <a class="footer__social" href="#">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M29 13L10 20.5L17 21.5M29 13L26.5 28L17 21.5M29 13L17 21.5M17 21.5V27L20.2488 23.7229" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-
-          <a class="footer__social" href="#">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25 10H22C20.6739 10 19.4021 10.5268 18.4645 11.4645C17.5268 12.4021 17 13.6739 17 15V18H14V22H17V30H21V22H24L25 18H21V15C21 14.7348 21.1054 14.4804 21.2929 14.2929C21.4804 14.1054 21.7348 14 22 14H25V10Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
-          </a>
-
-          <a class="footer__social" href="#">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 24C22.2091 24 24 22.2091 24 20C24 17.7909 22.2091 16 20 16C17.7909 16 16 17.7909 16 20C16 22.2091 17.7909 24 20 24Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11 24V16C11 13.2386 13.2386 11 16 11H24C26.7614 11 29 13.2386 29 16V24C29 26.7614 26.7614 29 24 29H16C13.2386 29 11 26.7614 11 24Z" stroke="#181C29" stroke-width="1.5"/>
-              <path d="M25.5 14.51L25.51 14.4989" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
-          </a>
-
-          <a class="footer__social" href="#">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24.8198 28.7684L11.7532 11.9684C11.4466 11.5742 11.7275 11 12.2268 11H14.7065C14.8917 11 15.0665 11.0855 15.1802 11.2316L28.2468 28.0316C28.5534 28.4258 28.2725 29 27.7732 29H25.2935C25.1083 29 24.9335 28.9145 24.8198 28.7684Z" stroke="#181C29" stroke-width="1.5"/>
-              <path d="M28 11L12 29" stroke="#181C29" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-
-          </a>
-        </div>
-
-        <p>
-          © Copyright 2025, All Rights Reserved
-        </p>
-
-        <div class="caption">
-          <a href="https://rs.school" class="footer__link" target="_blank">Made in Rolling Scopes School</a>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script src="app.js" type="module"></script>
+    <script src="app.js" type="module"></script>
   </body>
 </html>

@@ -25,6 +25,13 @@
  */
 
 /**
+ * @typedef {Gift & {
+ *   picture: string
+ *   styleModifier: string
+ * }} GiftMeta
+ */
+
+/**
  * @typedef {{
  *   bestAmount: number
  *   categories: {
@@ -37,7 +44,7 @@
  *     all: string
  *     best: string
  *   },
- *   onClickGift: (gift: Gift) => {}
+ *   onClickGift: (meta: GiftMeta) => {}
  * }} GiftConfig
  */
 
@@ -146,10 +153,20 @@ export class Gifts {
   #giftToTemplate(gift) {
     const picture = this.#getPicture(gift)
     const styleModifier = this.#getStyleModifier(gift)
-    const meta = encodeURI(JSON.stringify(gift))
+
+    /**
+     * @type {GiftMeta}
+     */
+    const meta = {
+      ...gift,
+      picture,
+      styleModifier,
+    }
+
+    const metaEncoded = encodeURI(JSON.stringify(meta))
 
     return `
-      <a class="${this.#giftCssClassName}" data-category="${gift.category}" data-meta="${meta}" href="#">
+      <a class="${this.#giftCssClassName}" data-category="${gift.category}" data-meta="${metaEncoded}" href="#">
         <img class="${this.#giftCssClassName}__picture" src="${picture}" alt="${gift.category}">
 
         <div class="${this.#giftCssClassName}__text">
@@ -157,7 +174,7 @@ export class Gifts {
             ${gift.category}
           </h4>
 
-          <h3 class="h3">
+          <h3 class="h3 ${this.#giftCssClassName}__subheader">
             ${gift.name}
           </h3>
         </div>
@@ -238,14 +255,17 @@ export class Gifts {
    */
   #clickHandler(e) {
     const item = e.target.closest(`.${this.#giftCssClassName}`)
-    const meta = item.getAttribute('data-meta')
+    const metaEncoded = item.getAttribute('data-meta')
 
-    if (meta !== null) {
+    if (metaEncoded !== null) {
       e.preventDefault()
 
-      const gift = JSON.parse(decodeURI(meta))
+      /**
+       * @type {GiftMeta}
+       */
+      const meta = JSON.parse(decodeURI(metaEncoded))
 
-      this.#config.onClickGift(gift)
+      this.#config.onClickGift(meta)
     }
   }
 
