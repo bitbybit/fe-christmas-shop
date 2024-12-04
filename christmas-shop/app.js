@@ -1,6 +1,7 @@
 import { Gifts } from 'service/Gifts.js'
 import { Tabs } from 'service/Tabs.js'
 import { Modal } from 'service/Modal.js'
+import { Slider } from 'service/Slider.js'
 
 const init = async function () {
   const modal = new Modal({
@@ -65,6 +66,25 @@ const init = async function () {
 
     onSwitchTab(tab) {
       gifts.insertAll(tab)
+    }
+  })
+
+  new Slider({
+    clicks: {
+      amount: 3,
+      amountMobile: 6,
+      maxSize: '768px'
+    },
+
+    cssClassNames: {
+      disabled: 'button--disabled'
+    },
+
+    cssSelectors: {
+      slider: '.slider',
+      items: '.slider__items',
+      left: '.slider__control--left',
+      right: '.slider__control--right',
     }
   })
 }
