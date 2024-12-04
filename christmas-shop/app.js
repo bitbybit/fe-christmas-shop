@@ -1,4 +1,5 @@
 import { Gifts } from 'service/Gifts.js'
+import { Tabs } from 'service/Tabs.js'
 
 const init = async function () {
   const gifts = new Gifts({
@@ -25,18 +26,26 @@ const init = async function () {
         picture: 'assets/common/gifts/gift-for-harmony.png'
       }
     },
-    cssClassNames: {
-      menuItem: 'menu__link',
-      menuItemActive: 'menu__link--active'
-    },
     cssSelectors: {
-      bestGifts: '#best-gifts .cards',
-      allGifts: '.all-gifts .cards',
-      menu: '.all-gifts__menu'
+      all: '.all-gifts .cards',
+      best: '#best-gifts .cards'
     }
   })
 
   await gifts.load()
+
+  new Tabs({
+    cssClassNames: {
+      item: 'menu__link',
+      active: 'menu__link--active'
+    },
+    cssSelectors: {
+      menu: '.all-gifts__menu'
+    },
+    onSwitchTab(tab) {
+      gifts.insertAll(tab)
+    }
+  })
 }
 
 document.addEventListener('DOMContentLoaded', init)

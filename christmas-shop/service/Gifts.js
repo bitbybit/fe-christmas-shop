@@ -33,23 +33,17 @@
  *     health: GiftCategory
  *     harmony: GiftCategory
  *   },
- *   cssClassNames: {
- *     menuItem: string
- *     menuItemActive: string
- *   },
  *   cssSelectors: {
- *     allGifts: string
- *     bestGifts: string
- *     menu: string
+ *     all: string
+ *     best: string
  *   }
  * }} GiftConfig
  */
 
 /**
  * @typedef {{
- *   allGifts: HTMLElement | null
- *   bestGifts: HTMLElement | null
- *   menu: HTMLElement | null
+ *   all: HTMLElement | null
+ *   best: HTMLElement | null
  * }} GiftElements
  */
 
@@ -75,20 +69,17 @@ export class Gifts {
   constructor ({
     bestAmount,
     categories,
-    cssClassNames,
     cssSelectors,
   }) {
     this.#config = {
       bestAmount,
       categories,
-      cssClassNames,
       cssSelectors
     }
 
     this.#elements = {
-      allGifts: document.querySelector(cssSelectors.allGifts),
-      bestGifts: document.querySelector(cssSelectors.bestGifts),
-      menu: document.querySelector(cssSelectors.menu)
+      all: document.querySelector(cssSelectors.all),
+      best: document.querySelector(cssSelectors.best)
     }
   }
 
@@ -98,44 +89,42 @@ export class Gifts {
 
     this.insertBest()
     this.insertAll()
-
-    this.#addMenuClickHandler()
   }
 
   insertBest (isRandom = true) {
-    if (this.#elements.bestGifts === null) {
+    if (this.#elements.best === null) {
       return
     }
 
     const gifts = (isRandom ? this.random : this.best)
       .slice(0, this.#config.bestAmount)
 
-    this.#elements.bestGifts.innerHTML = this.#giftsToTemplate(gifts)
+    this.#elements.best.innerHTML = this.#giftsToTemplate(gifts)
   }
 
   /**
    * @param {GiftCategoryAlias} category
    */
   insertAll (category = this.#config.categories.all.alias) {
-    if (this.#elements.allGifts === null) {
+    if (this.#elements.all === null) {
       return
     }
 
     switch (category) {
       case this.#config.categories.all.alias:
-        this.#elements.allGifts.innerHTML = this.#giftsToTemplate(this.all)
+        this.#elements.all.innerHTML = this.#giftsToTemplate(this.all)
         break
 
       case this.#config.categories.work.alias:
-        this.#elements.allGifts.innerHTML = this.#giftsToTemplate(this.work)
+        this.#elements.all.innerHTML = this.#giftsToTemplate(this.work)
         break
 
       case this.#config.categories.health.alias:
-        this.#elements.allGifts.innerHTML = this.#giftsToTemplate(this.health)
+        this.#elements.all.innerHTML = this.#giftsToTemplate(this.health)
         break
 
       case this.#config.categories.harmony.alias:
-        this.#elements.allGifts.innerHTML = this.#giftsToTemplate(this.harmony)
+        this.#elements.all.innerHTML = this.#giftsToTemplate(this.harmony)
         break
     }
   }
@@ -221,71 +210,6 @@ export class Gifts {
     const values = Object.values(gift.superpowers)
 
     return values.reduce((total, value) => total + Number(value), 0)
-  }
-
-  #addMenuClickHandler() {
-    if (this.#elements.menu === null) {
-      return
-    }
-
-    this.#elements.menu.addEventListener('click', this.#menuClickHandler.bind(this))
-  }
-
-  /**
-   * @param {Event} e
-   */
-  #menuClickHandler(e) {
-    const tab = e.target.getAttribute('data-tab')
-
-    if (tab === null) {
-      return
-    }
-
-    e.preventDefault()
-
-    this.#toggleActiveMenuItem(e.target)
-    this.#switchActiveTab(tab)
-  }
-
-  /**
-   * @param {HTMLElement} target
-   */
-  #toggleActiveMenuItem(target) {
-    const items = this.#elements.menu.querySelectorAll(
-      `.${this.#config.cssClassNames.menuItem}`
-    )
-
-    items.forEach((item) => {
-      item.classList.remove(this.#config.cssClassNames.menuItemActive)
-    })
-
-    target.classList.add(this.#config.cssClassNames.menuItemActive)
-  }
-
-  /**
-   * @param {GiftCategoryAlias} tab
-   */
-  #switchActiveTab(tab) {
-    switch (tab) {
-      case this.#config.categories.all.alias:
-        this.insertAll()
-        break
-
-      case this.#config.categories.work.alias:
-        this.insertAll(this.#config.categories.work.alias)
-        break
-
-      case this.#config.categories.health.alias:
-        this.insertAll(this.#config.categories.health.alias)
-        break
-
-      case this.#config.categories.harmony.alias:
-        this.insertAll(this.#config.categories.harmony.alias)
-        break
-
-      default:
-        break
-    }
   }
 
   /**
