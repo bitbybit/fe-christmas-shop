@@ -93,6 +93,7 @@ export class Slider {
   #clickHandlerLeft(e) {
     e.preventDefault()
 
+    this.#disableControls()
     this.#scrollToLeft()
   }
 
@@ -102,6 +103,7 @@ export class Slider {
   #clickHandlerRight(e) {
     e.preventDefault()
 
+    this.#disableControls()
     this.#scrollToRight()
   }
 
@@ -125,6 +127,11 @@ export class Slider {
 
   #resizeHandler() {
     this.#scrollReset()
+  }
+
+  #disableControls() {
+    this.#elements.left.classList.add(this.#config.cssClassNames.disabled)
+    this.#elements.right.classList.add(this.#config.cssClassNames.disabled)
   }
 
   #scrollToLeft() {
