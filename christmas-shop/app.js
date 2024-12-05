@@ -3,6 +3,7 @@ import { Tabs } from 'service/Tabs.js'
 import { Modal } from 'service/Modal.js'
 import { Slider } from 'service/Slider.js'
 import { Burger } from 'service/Burger.js'
+import { Countdown } from 'service/Countdown.js'
 
 const init = async function () {
   const modal = new Modal({
@@ -99,6 +100,16 @@ const init = async function () {
       close: '.header__menu-close',
       menu: '.menu-burger'
     }
+  })
+
+  new Countdown({
+    cssSelectors: {
+      days: '.countdown__days',
+      hours: '.countdown__hours',
+      minutes: '.countdown__minutes',
+      seconds: '.countdown__seconds'
+    },
+    date: new Date('2025-01-01')
   })
 }
 
