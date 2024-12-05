@@ -4,6 +4,7 @@ import { Modal } from 'service/Modal.js'
 import { Slider } from 'service/Slider.js'
 import { Burger } from 'service/Burger.js'
 import { Countdown } from 'service/Countdown.js'
+import { Up } from 'service/Up.js'
 
 const init = async function () {
   const modal = new Modal({
@@ -109,7 +110,20 @@ const init = async function () {
       minutes: '.countdown__minutes',
       seconds: '.countdown__seconds'
     },
+
     date: new Date('2025-01-01')
+  })
+
+  new Up({
+    cssClassNames: {
+      visible: 'up--visible'
+    },
+
+    cssSelectors: {
+      up: '.up',
+    },
+
+    maxSize: '768px'
   })
 }
 

@@ -112,3 +112,28 @@
     }
   }
 }
+
+.up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-red);
+  border-radius: 100px;
+  transition: all 0.3s;
+
+  &--visible {
+    display: flex;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    border: 0;
+  }
+}
