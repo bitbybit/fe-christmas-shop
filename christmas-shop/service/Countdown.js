@@ -60,6 +60,14 @@ export class Countdown {
   }
 
   #start() {
+    if (
+      this.#elements.days === null ||
+      this.#elements.hours === null ||
+      this.#elements.minutes === null ||
+      this.#elements.seconds === null) {
+      return
+    }
+
     const diff = this.#config.date.getTime() - (new Date()).getTime()
 
     this.#seconds = Math.floor(diff / 1000)
