@@ -203,7 +203,7 @@ export class Slider {
       return 0
     }
 
-    return this.#elements.items.offsetLeft - this.#sliderPaddingLeft
+    return parseFloat(this.#elements.items.style.left || 0)
   }
 
   /**
