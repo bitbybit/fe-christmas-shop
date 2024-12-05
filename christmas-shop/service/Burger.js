@@ -30,6 +30,9 @@ export class Burger {
    */
   #elements
 
+  /**
+   * @param {BurgerConfig} config
+   */
   constructor({
     cssClassNames,
     cssSelectors
