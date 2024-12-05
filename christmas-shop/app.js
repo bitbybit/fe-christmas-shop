@@ -2,6 +2,7 @@ import { Gifts } from 'service/Gifts.js'
 import { Tabs } from 'service/Tabs.js'
 import { Modal } from 'service/Modal.js'
 import { Slider } from 'service/Slider.js'
+import { Burger } from 'service/Burger.js'
 
 const init = async function () {
   const modal = new Modal({
@@ -85,6 +86,18 @@ const init = async function () {
       items: '.slider__items',
       left: '.slider__control--left',
       right: '.slider__control--right',
+    }
+  })
+
+  new Burger({
+    cssClassNames: {
+      link: 'menu-burger__link'
+    },
+
+    cssSelectors: {
+      burger: '.header__menu-burger',
+      close: '.header__menu-close',
+      menu: '.menu-burger'
     }
   })
 }
