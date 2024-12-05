@@ -107,9 +107,17 @@ body.menu-burger-opened {
 
   .header__menu-close {
     display: block;
+
+    @media (min-width: screen.$md + 1px) {
+      display: none;
+    }
   }
 
   .menu-burger {
     display: flex;
+
+    @media (min-width: screen.$md + 1px) {
+      display: none;
+    }
   }
 }
