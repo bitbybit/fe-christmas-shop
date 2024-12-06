@@ -48,7 +48,13 @@
           </li>
         </ul>
 
-        <img class="header__menu-burger" src="assets/common/header/burger.svg" width="40" height="40" alt="Burger">
+        <a class="header__menu-burger" href="#">
+          <img src="assets/common/header/burger.svg" width="40" height="40" alt="Burger">
+        </a>
+
+        <a class="header__menu-close" href="#">
+          <img src="assets/common/header/close.svg" width="40" height="40" alt="Close">
+        </a>
       </header>
 
       <div class="hero">
@@ -110,7 +116,7 @@
 
             <div class="slider__item">
               <div class="slider__text">
-                create
+                Create
               </div>
 
               <img class="slider__picture" src="assets/home/slider/christmas-trees.png" width="200" height="200" alt="Christmas Trees">
@@ -123,20 +129,27 @@
 
               <img class="slider__picture" src="assets/home/slider/christmas-tree-ball.png" width="200" height="200" alt="Christmas Tree Ball">
             </div>
+
+            <div class="slider__item">
+              <div class="slider__text">
+                Dream
+              </div>
+
+              <img class="slider__picture" src="assets/home/slider/fairytale-house.png" width="200" height="200" alt="Fairytale House">
+            </div>
           </div>
 
           <div class="slider__controls">
-            <a class="button button--outline button--disabled slider__control" href="#">
+            <a class="button button--outline button--disabled slider__control slider__control--left" href="#">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5 7H1M1 7L7 1M1 7L7 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
 
-            <a class="button button--outline slider__control" href="#">
+            <a class="button button--outline slider__control slider__control--right" href="#">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-
             </a>
           </div>
         </div>
@@ -152,63 +165,7 @@
             especially for you
           </h2>
 
-          <div class="cards">
-            <a class="card" href="#">
-              <img class="card__picture" src="assets/common/gifts/gift-for-work.png" alt="Gift for Work">
-
-              <div class="card__text">
-                <h4 class="h4 card__header card__header--work">
-                  For work
-                </h4>
-
-                <h3 class="h3">
-                  Console.log Guru
-                </h3>
-              </div>
-            </a>
-
-            <a class="card" href="#">
-              <img class="card__picture" src="assets/common/gifts/gift-for-health.png" alt="Gift for Health">
-
-              <div class="card__text">
-                <h4 class="h4 card__header card__header--health">
-                  For health
-                </h4>
-
-                <h3 class="h3">
-                  Hydration Bot
-                </h3>
-              </div>
-            </a>
-
-            <a class="card" href="#">
-              <img class="card__picture" src="assets/common/gifts/gift-for-work.png" alt="Gift for Work">
-
-              <div class="card__text">
-                <h4 class="h4 card__header card__header--work">
-                  For work
-                </h4>
-
-                <h3 class="h3">
-                  Merge Master
-                </h3>
-              </div>
-            </a>
-
-            <a class="card" href="#">
-              <img class="card__picture" src="assets/common/gifts/gift-for-harmony.png" alt="Gift for Harmony">
-
-              <div class="card__text">
-                <h4 class="h4 card__header card__header--harmony">
-                  For harmony
-                </h4>
-
-                <h3 class="h3">
-                  Spontaneous Coding Philosopher
-                </h3>
-              </div>
-            </a>
-          </div>
+          <div class="cards"></div>
         </div>
       </div>
 
@@ -229,22 +186,22 @@
 
             <div class="countdown__content">
               <div class="countdown__item">
-                <div class="h2">47</div>
+                <div class="h2 countdown__days">00</div>
                 <div class="h4">days</div>
               </div>
 
               <div class="countdown__item">
-                <div class="h2">5</div>
+                <div class="h2 countdown__hours">00</div>
                 <div class="h4">hours</div>
               </div>
 
               <div class="countdown__item">
-                <div class="h2">34</div>
+                <div class="h2 countdown__minutes">00</div>
                 <div class="h4">minutes</div>
               </div>
 
               <div class="countdown__item">
-                <div class="h2">12</div>
+                <div class="h2 countdown__seconds">00</div>
                 <div class="h4">seconds</div>
               </div>
             </div>
@@ -334,5 +291,45 @@
         </div>
       </footer>
     </div>
+
+    <ul class="menu-burger">
+      <li class="h2 menu-burger__item">
+        <a class="menu-burger__link" href="gifts.html">
+          GIFTS
+        </a>
+      </li>
+
+      <li class="h2 menu-burger__item">
+        <a class="menu-burger__link" href="index.html#about">
+          ABOUT
+        </a>
+      </li>
+
+      <li class="h2 menu-burger__item">
+        <a class="menu-burger__link" href="index.html#best-gifts">
+          BEST
+        </a>
+      </li>
+
+      <li class="h2 menu-burger__item">
+        <a class="menu-burger__link" href="#contacts">
+          CONTACTS
+        </a>
+      </li>
+    </ul>
+
+    <div class="modal">
+      <div class="card modal__card">
+        <a class="modal__close" href="#">
+          <img src="assets/common/modal/close.svg" alt="Close">
+        </a>
+
+        <img class="card__picture" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+
+        <div class="card__text"></div>
+      </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
   </body>
 </html>

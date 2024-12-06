@@ -1,5 +1,6 @@
 @use 'style/common/fonts.scss';
 @use 'style/common/variables.scss';
+@use 'style/common/window.scss';
 @use 'style/common/header.scss';
 @use 'style/common/container.scss';
 @use 'style/common/caption.scss';
@@ -8,7 +9,4 @@
 @use 'style/common/cards.scss';
 @use 'style/common/menu.scss';
 @use 'style/common/footer.scss';
-
-html {
-  scroll-behavior: smooth;
-}
+@use 'style/common/modal.scss';

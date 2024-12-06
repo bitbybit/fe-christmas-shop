@@ -1,4 +1,4 @@
-@use '../common/screens.scss' as screen;
+@use 'style/common/screen.scss' as screen;
 
 .slider {
   padding: 60px 82px;
@@ -18,10 +18,13 @@
   }
 
   &__items {
+    position: relative;
+    left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    transition: all 0.3s ease-in-out;
   }
 
   &__item {

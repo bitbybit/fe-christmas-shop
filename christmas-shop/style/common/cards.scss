@@ -1,4 +1,4 @@
-@use '../common/screens.scss' as screen;
+@use 'style/common/screen.scss' as screen;
 
 $width: 310px;
 
@@ -44,9 +44,9 @@ $width: 310px;
     transition: all 0.3s;
   }
 
-  &:hover &__text,
-  &:active &__text,
-  &:focus &__text {
+  &:hover &__subheader,
+  &:active &__subheader,
+  &:focus &__subheader {
     color: var(--color-red);
   }
 
@@ -63,6 +63,48 @@ $width: 310px;
 
     &--harmony{
       color: var(--color-pink);
+    }
+  }
+
+  &__description {
+    padding-top: 8px;
+  }
+
+  &__info {
+    padding-top: 20px;
+  }
+
+  &__superpowers {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+  }
+
+  &__superpower {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 0;
+    text-transform: capitalize;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__star {
+    width: 14px;
+    height: 16px;
+
+    &--disabled {
+      opacity: 0.1;
     }
   }
 }
